@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
         // Override point for customization after application launch.
         return true
     }
@@ -42,8 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    func application(_ application: UIApplication, userAcceptedCloudKitShareWith cloudKitShareMetadata: CKShareMetadata) {
-        print("Accepted CloudKit sharing from: \(cloudKitShareMetadata.ownerIdentity.nameComponents?.givenName)")
+    func application(_ application: UIApplication, userDidAcceptCloudKitShareWith userAcceptedCloudKitSharedWith: CKShareMetadata) {
+        print("Accepted CloudKit sharing from: \(userAcceptedCloudKitSharedWith.ownerIdentity.nameComponents?.givenName)")
     }
 
 }

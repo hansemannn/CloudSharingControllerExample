@@ -32,24 +32,26 @@ class ViewController: UIViewController, UICloudSharingControllerDelegate {
         
         // Initialize cloud sharing
         let share: CKShare = CKShare(rootRecord: newRecord)
-        share.setObject("\(fileName).png", forKey: CKShareTitleKey)
+        share[CKShareTitleKey] = "\(fileName).png" as CKRecordValue?
+        share[CKShareTypeKey] = "com.appsird.Touring-Engine" as CKRecordValue
         
         let container: CKContainer = CKContainer(identifier: "Test")
         let cloudSharingController: UICloudSharingController = UICloudSharingController(share: share, container: container)
         cloudSharingController.delegate = self
         
         // Set sharing permissions
-        cloudSharingController.availablePermissions = [
-            UICloudSharingPermissionOptions.publicOnly,
-            UICloudSharingPermissionOptions.readWrite
-        ]
+        cloudSharingController.availablePermissions = [.allowPublic, .allowReadOnly]
         
         // Show cloud shareing dialog
         self.present(cloudSharingController, animated: true, completion: nil)
     }
     
     // MARK: CloudKit Delegates
-    
+
+    public func itemTitle(for csc: UICloudSharingController) -> String? {
+        return "here"
+    }
+
     func cloudSharingControllerDidSaveShare(_ csc: UICloudSharingController) {
         print("cloudSharingControllerDidSaveShare")
     }
@@ -58,7 +60,7 @@ class ViewController: UIViewController, UICloudSharingControllerDelegate {
         print("cloudSharingControllerDidStopSharing")
     }
     
-    func cloudSharingController(_ csc: UICloudSharingController, failedToSaveShareWithError error: NSError) {
+    func cloudSharingController(_ csc: UICloudSharingController, failedToSaveShareWithError error: Error) {
         print("failedToSaveShareWithError: \(error.localizedDescription)")
     }
     
