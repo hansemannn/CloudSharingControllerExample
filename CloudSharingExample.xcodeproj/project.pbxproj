@@ -121,7 +121,6 @@
 				TargetAttributes = {
 					3A18CA2A1D10596300EFB8DC = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = NGR89BBT5V;
 						DevelopmentTeamName = "Hans Knoechel";
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -290,10 +289,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CloudSharingExample/CloudSharingExample.entitlements;
-				DEVELOPMENT_TEAM = NGR89BBT5V;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CloudSharingExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appsird.CloudSharingExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcelerator.CloudSharingExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -304,10 +303,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CloudSharingExample/CloudSharingExample.entitlements;
-				DEVELOPMENT_TEAM = NGR89BBT5V;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CloudSharingExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appsird.CloudSharingExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcelerator.CloudSharingExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
