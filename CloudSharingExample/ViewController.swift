@@ -33,7 +33,7 @@ class ViewController: UIViewController, UICloudSharingControllerDelegate {
         // Initialize cloud sharing
         let share: CKShare = CKShare(rootRecord: newRecord)
         share[CKShareTitleKey] = "\(fileName).png" as CKRecordValue?
-        share[CKShareTypeKey] = "com.appsird.Touring-Engine" as CKRecordValue
+        share[CKShareTypeKey] = "com.appcelerator.CloudSharingExample" as CKRecordValue
         
         let container: CKContainer = CKContainer(identifier: "Test")
         let cloudSharingController: UICloudSharingController = UICloudSharingController(share: share, container: container)
