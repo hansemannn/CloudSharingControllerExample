@@ -4,7 +4,7 @@ This example project demonstrates the usage of the new `UICloudSharingController
 Please check out the [API diffs](https://developer.apple.com/library/prerelease/content/releasenotes/General/iOS10APIDiffs/Swift/UIKit.html) for more information on the new API's.
 As for now, Apple does not document much around the API, so this example might be updated over the next months. 
 
-<img src="https://abload.de/img/simulatorscreenshot14hqjue.png" alt="CloudSharing Example" />
+<img src="./example.png" alt="CloudSharing Example" />
 
 ### Contributing
 ---
